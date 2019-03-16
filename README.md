@@ -1,52 +1,10 @@
-# search-jobs
+assumption that i have done building This
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+1. will display all keys irrespective of whether it has value or Note
 
-## Prerequisites
+2. when user selects the experience dropdown it will show results based on the selected one and the empty owners
+   eg: if experience fresher is selected then it will filter results based on fresher as well as experience as ""
 
-You will need the following things properly installed on your computer.
+3. added integration tests also
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd search-jobs`
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+4. download the repo and use ember serve to run the app and ember test --server to run the testSelector

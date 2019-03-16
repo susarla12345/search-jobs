@@ -1,0 +1,52 @@
+<div class='header-actions'>
+  <div class='left-action'>
+    <div class='experience-dropdown action' data-test-id='experience-dropdown'>
+      <select onchange={{action "selectExperience" value="target.value"}}>
+        {{#each experiences as |experienceChoice|}}
+        <option value={{experienceChoice}} selected={{eq vehicle experienceChoice}}>{{experienceChoice}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class='location-select action' data-test-id='location-select'>
+      {{input value=value
+        placeholder='enter-location'
+        name='location'
+        change= (action 'changeLocation')
+      }}
+    </div>
+
+    <div class='search-button action' data-test-id='search-button'>
+      <button class='search-jobs' onclick={{action 'searchJobs'}}>search</button>
+    </div>
+  </div>
+
+  <div class='sort-buttons right-actions'>
+    <button class='location sort' data-test-id='location-sort' onclick={{action 'sortByLocation'}}>Sort by location</button>
+    <button class='experiance sort' data-test-id='experience-sort' onclick={{action 'sortByExp'}}>Sort by exp</button>
+  </div>
+</div>
+
+{{log sortedJobs 'sortedJobs'}}
+{{#if sortedJobs}}
+  <div class='all-jobs' data-test-id='all-jobs'>
+    {{#each sortedJobs as |job|}}
+      <div class='job'>
+        <div class='title key'><span class='label'>jobTitle: </span> {{job.title}}</div>
+        <div class='companyname key'><span class='label'>company: </span>{{job.companyname}}</div>
+        <div class='location key'><span class='label'>location: </span>{{job.location}}</div>
+        <div class='experience key'><span class='label'>experince: </span>{{job.experience}}</div>
+        <div class='salary key'><span class='label'>salary: </span>{{job.salary}}</div>
+        <div class='type key'><span class='label'>type:</span> {{job.type}}</div>
+        <div class='applylink key'><span class='label'>applylink: </span>{{job.applylink}}</div>
+        <div class='jd key'><span class='label'>jd: </span>{{job.jd}}</div>
+        <div class='skills key'><span class='label'>skills: </span>{{job.skills}}</div>
+        <div class='created key'><span class='label'>created: </span>{{job.created}}</div>
+        <div class='source key'><span class='label'>source: </span>{{job.source}}</div>
+        <div class='enddate key'><span class='label'>startdate: </span>{{job.enddate}}</div>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+
+{{yield}}

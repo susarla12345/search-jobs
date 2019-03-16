@@ -1,0 +1,72 @@
+.job-heading {
+  margin-left: 10px
+}
+
+.all-jobs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.job {
+    border: 1px solid black;
+    margin: 10px;
+    width: 46%;
+    padding: 15px;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.action {
+  margin-right: 20px;
+}
+
+.left-action {
+  display: inline-flex;
+}
+
+.left-action select {
+  width: 180px;
+  height: 30px;
+}
+
+.left-action input {
+  width: 180px;
+  height: 24px;
+  padding-left: 10px;
+}
+
+.left-action button {
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  background: lightgrey;
+
+}
+
+.right-actions .location {
+  height: 30px;
+  margin-right: 30px;
+  border-radius: 5px;
+  background: lightgrey;
+}
+
+.right-actions .experiance {
+  height: 30px;
+  border-radius: 5px;
+  background: lightgrey;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.key {
+  margin-bottom: 5px;
+  margin-top:5px;
+}
